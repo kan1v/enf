@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+
+.vscode
+.idea
+.env
+django.log
+security.log
+
+mdeia/
+debug.log
