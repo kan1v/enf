@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'cart',
+    'users',
 
 ]
 
@@ -79,7 +80,7 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'HOST': os.getenv('POSGRES_HOST', 'localhost'),
         'PORT': os.getenv('POSTGRES_PORT', '5432'),
-        'ATOMIC_REQUEST': True,
+        'ATOMIC_REQUESTS': True,
     }
 }
 
@@ -131,3 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_COOKIE_AGE = 86400 # 30 days
 SESSION_SAVE_EVERY_REQUEST = True
+
+AUTH_USER_MODEL = 'users.CustomUser'
